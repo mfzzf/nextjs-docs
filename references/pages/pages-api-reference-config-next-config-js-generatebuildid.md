@@ -1,0 +1,40 @@
+<!--
+title: generateBuildId
+section: App Router/Pages — API Reference
+source: https://nextjs.org/docs/pages/api-reference/config/next-config-js/generateBuildId
+raw: https://nextjs.org/docs/pages/api-reference/config/next-config-js/generateBuildId.md
+description: Configure the build id, which is used to identify the current build in which your application is being served.
+-->
+
+---
+title: generateBuildId
+description: Configure the build id, which is used to identify the current build in which your application is being served.
+url: "https://nextjs.org/docs/pages/api-reference/config/next-config-js/generateBuildId"
+docs_index: /docs/pages/llms.txt
+version: 16.2.6
+lastUpdated: 2026-05-19
+router: Pages Router
+prerequisites:
+  - "Configuration: /docs/pages/api-reference/config"
+  - "next.config.js Options: /docs/pages/api-reference/config/next-config-js"
+---
+
+
+> For an index of all Next.js documentation, see [/docs/pages/llms.txt](/docs/pages/llms.txt).
+Next.js generates an ID during `next build` to identify which version of your application is being served. The same build should be used and boot up multiple containers.
+
+If you are rebuilding for each stage of your environment, you will need to generate a consistent build ID to use between containers. Use the `generateBuildId` command in `next.config.js`:
+
+```jsx filename="next.config.js"
+module.exports = {
+  generateBuildId: async () => {
+    // This could be anything, using the latest git hash
+    return process.env.GIT_HASH
+  },
+}
+```
+---
+
+For a semantic overview of all documentation, see [/docs/sitemap.md](/docs/sitemap.md)
+
+For an index of all available documentation, see [/docs/pages/llms.txt](/docs/pages/llms.txt)

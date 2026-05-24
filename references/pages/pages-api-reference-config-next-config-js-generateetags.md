@@ -1,0 +1,37 @@
+<!--
+title: generateEtags
+section: App Router/Pages — API Reference
+source: https://nextjs.org/docs/pages/api-reference/config/next-config-js/generateEtags
+raw: https://nextjs.org/docs/pages/api-reference/config/next-config-js/generateEtags.md
+description: Next.js will generate etags for every page by default. Learn more about how to disable etag generation here.
+-->
+
+---
+title: generateEtags
+description: Next.js will generate etags for every page by default. Learn more about how to disable etag generation here.
+url: "https://nextjs.org/docs/pages/api-reference/config/next-config-js/generateEtags"
+docs_index: /docs/pages/llms.txt
+version: 16.2.6
+lastUpdated: 2026-05-19
+router: Pages Router
+prerequisites:
+  - "Configuration: /docs/pages/api-reference/config"
+  - "next.config.js Options: /docs/pages/api-reference/config/next-config-js"
+---
+
+
+> For an index of all Next.js documentation, see [/docs/pages/llms.txt](/docs/pages/llms.txt).
+Next.js will generate [etags](https://en.wikipedia.org/wiki/HTTP_ETag) for every page by default. You may want to disable etag generation for HTML pages depending on your cache strategy.
+
+Open `next.config.js` and disable the `generateEtags` option:
+
+```js filename="next.config.js"
+module.exports = {
+  generateEtags: false,
+}
+```
+---
+
+For a semantic overview of all documentation, see [/docs/sitemap.md](/docs/sitemap.md)
+
+For an index of all available documentation, see [/docs/pages/llms.txt](/docs/pages/llms.txt)

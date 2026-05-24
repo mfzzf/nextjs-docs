@@ -1,0 +1,44 @@
+<!--
+title: transpilePackages
+section: App Router/Pages — API Reference
+source: https://nextjs.org/docs/pages/api-reference/config/next-config-js/transpilePackages
+raw: https://nextjs.org/docs/pages/api-reference/config/next-config-js/transpilePackages.md
+description: Automatically transpile and bundle dependencies from local packages (like monorepos) or from external dependencies (`node_modules`).
+-->
+
+---
+title: transpilePackages
+description: "Automatically transpile and bundle dependencies from local packages (like monorepos) or from external dependencies (`node_modules`)."
+url: "https://nextjs.org/docs/pages/api-reference/config/next-config-js/transpilePackages"
+docs_index: /docs/pages/llms.txt
+version: 16.2.6
+lastUpdated: 2026-05-19
+router: Pages Router
+prerequisites:
+  - "Configuration: /docs/pages/api-reference/config"
+  - "next.config.js Options: /docs/pages/api-reference/config/next-config-js"
+---
+
+
+> For an index of all Next.js documentation, see [/docs/pages/llms.txt](/docs/pages/llms.txt).
+Next.js can automatically transpile and bundle dependencies from local packages (like monorepos) or from external dependencies (`node_modules`). This replaces the `next-transpile-modules` package.
+
+```js filename="next.config.js"
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  transpilePackages: ['package-name'],
+}
+
+module.exports = nextConfig
+```
+
+## Version History
+
+| Version   | Changes                    |
+| --------- | -------------------------- |
+| `v13.0.0` | `transpilePackages` added. |
+---
+
+For a semantic overview of all documentation, see [/docs/sitemap.md](/docs/sitemap.md)
+
+For an index of all available documentation, see [/docs/pages/llms.txt](/docs/pages/llms.txt)
